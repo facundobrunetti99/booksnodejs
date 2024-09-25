@@ -30,6 +30,9 @@ const getBook = async (req, res, next) => {
 };
 
 // Obtener todos los libros
+/*Req es lo que envia el cliente por el body de postman 
+   y res es lo que voy a responder 
+*/
 router.get('/', async (req, res) => {
     try {
         const books = await Book.find();
@@ -135,3 +138,5 @@ router.delete('/:id', getBook,async(req,res)=>{
 
 
 module.exports = router;
+
+
